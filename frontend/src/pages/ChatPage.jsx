@@ -59,8 +59,8 @@ const ChatPage = () => {
   return (
     <div className="flex h-[calc(100vh-8rem)] gap-4">
       {/* Sidebar — Project List */}
-      <div className="w-64 flex-shrink-0 glass rounded-2xl border border-white/8 flex flex-col overflow-hidden">
-        <div className="p-4 border-b border-white/8">
+      <div className="w-64 flex-shrink-0 glass rounded-2xl border border-white/10 flex flex-col overflow-hidden">
+        <div className="p-4 border-b border-white/10">
           <h3 className="font-semibold text-white flex items-center gap-2">
             <MessageSquare size={16} className="text-primary-400" /> Channels
           </h3>
@@ -76,7 +76,7 @@ const ChatPage = () => {
                 className={`w-full flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-left transition-all duration-150 mb-0.5 ${
                   activeProject?._id === project._id
                     ? 'bg-primary-600/20 text-primary-300 border border-primary-500/30'
-                    : 'text-gray-400 hover:text-white hover:bg-white/8'
+                    : 'text-gray-400 hover:text-white hover:bg-white/10'
                 }`}
               >
                 <Hash size={14} className="flex-shrink-0" />
@@ -88,7 +88,7 @@ const ChatPage = () => {
       </div>
 
       {/* Main Chat Area */}
-      <div className="flex-1 glass rounded-2xl border border-white/8 flex flex-col overflow-hidden">
+      <div className="flex-1 glass rounded-2xl border border-white/10 flex flex-col overflow-hidden">
         {!activeProject ? (
           <div className="flex-1 flex flex-col items-center justify-center text-center p-8">
             <div className="w-16 h-16 rounded-2xl bg-primary-600/20 flex items-center justify-center mb-4">
@@ -100,7 +100,7 @@ const ChatPage = () => {
         ) : (
           <>
             {/* Chat Header */}
-            <div className="px-5 py-4 border-b border-white/8 flex items-center gap-3">
+            <div className="px-5 py-4 border-b border-white/10 flex items-center gap-3">
               <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: (activeProject.color || '#6366f1') + '30' }}>
                 {activeProject.icon || '#'}
               </div>
@@ -141,7 +141,7 @@ const ChatPage = () => {
                         <div className={`px-4 py-2.5 rounded-2xl text-sm leading-relaxed transition-all
                           ${isOwn
                             ? 'bg-primary-600 text-white rounded-br-sm'
-                            : 'glass text-gray-100 rounded-bl-sm border border-white/8'
+                            : 'glass text-gray-100 rounded-bl-sm border border-white/10'
                           }
                           ${msg.isDeleted ? 'opacity-50 italic' : ''}
                         `}>
@@ -157,7 +157,7 @@ const ChatPage = () => {
             </div>
 
             {/* Input */}
-            <form onSubmit={handleSend} className="p-4 border-t border-white/8">
+            <form onSubmit={handleSend} className="p-4 border-t border-white/10">
               <div className="flex items-center gap-3">
                 <Avatar user={user} size="sm" className="flex-shrink-0" />
                 <div className="flex-1 relative">

@@ -17,7 +17,7 @@ const KanbanColumn = ({ column, tasks, onAddTask, onTaskClick }) => {
         <div className="flex items-center gap-2">
           <div className="w-2.5 h-2.5 rounded-full" style={{ background: column.color }} />
           <h3 className="font-semibold text-sm text-white">{column.name}</h3>
-          <span className="text-xs text-gray-500 bg-white/8 px-1.5 py-0.5 rounded-full">
+          <span className="text-xs text-gray-500 bg-white/10 px-1.5 py-0.5 rounded-full">
             {tasks.length}
           </span>
         </div>

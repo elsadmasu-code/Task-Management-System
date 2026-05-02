@@ -63,11 +63,11 @@ const Settings = () => {
       </div>
 
       {/* Tab Bar */}
-      <div className="flex gap-1 glass rounded-xl p-1 border border-white/8 w-fit">
+      <div className="flex gap-1 glass rounded-xl p-1 border border-white/10 w-fit">
         {tabs.map(({ id, label, icon: Icon }) => (
           <button key={id} onClick={() => setActiveTab(id)}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-              activeTab === id ? 'bg-primary-600 text-white shadow-glow' : 'text-gray-400 hover:text-white hover:bg-white/8'
+              activeTab === id ? 'bg-primary-600 text-white shadow-glow' : 'text-gray-400 hover:text-white hover:bg-white/10'
             }`}>
             <Icon size={14} /> {label}
           </button>

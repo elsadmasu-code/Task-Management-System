@@ -23,7 +23,7 @@ const Modal = ({ isOpen, onClose, title, children, size = 'md', footer }) => {
       {/* Modal */}
       <div className={`relative w-full ${sizes[size]} glass-strong rounded-2xl shadow-2xl border border-white/12 animate-bounce-in`}>
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-white/8">
+        <div className="flex items-center justify-between p-6 border-b border-white/10">
           <h3 className="text-lg font-semibold text-white">{title}</h3>
           <button onClick={onClose} className="btn-icon">
             <X size={18} />

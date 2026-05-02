@@ -35,9 +35,9 @@ const Sidebar = ({ onClose }) => {
   const avatarUrl = user?.avatar?.url;
 
   return (
-    <aside className="h-full flex flex-col bg-dark-200/80 backdrop-blur-xl border-r border-white/8 w-64">
+    <aside className="h-full flex flex-col bg-dark-200/80 backdrop-blur-xl border-r border-white/10 w-64">
       {/* Logo */}
-      <div className="p-6 border-b border-white/8">
+      <div className="p-6 border-b border-white/10">
         <div className="flex items-center gap-3">
           <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-primary-500 to-purple-600 flex items-center justify-center shadow-glow">
             <span className="text-white font-black text-sm">TMS</span>
@@ -85,7 +85,7 @@ const Sidebar = ({ onClose }) => {
       </div>
 
       {/* Bottom user section */}
-      <div className="p-3 border-t border-white/8">
+      <div className="p-3 border-t border-white/10">
         <div className="flex items-center gap-3 p-2 rounded-xl hover:bg-white/5 transition-all cursor-pointer" onClick={() => navigate('/settings')}>
           {avatarUrl ? (
             <img src={avatarUrl} alt={user?.name} className="w-8 h-8 rounded-full object-cover" />

@@ -75,7 +75,7 @@ const CalendarView = () => {
                   key={day.toString()}
                   onClick={() => setSelectedDate(day)}
                   className={`relative p-1.5 rounded-xl text-center transition-all duration-150 min-h-[52px] flex flex-col items-center
-                    ${isSelected ? 'bg-primary-600 text-white shadow-glow' : todayDay ? 'bg-primary-600/20 text-primary-300' : 'hover:bg-white/8 text-gray-300'}
+                    ${isSelected ? 'bg-primary-600 text-white shadow-glow' : todayDay ? 'bg-primary-600/20 text-primary-300' : 'hover:bg-white/10 text-gray-300'}
                     ${!isSameMonth(day, currentDate) ? 'opacity-30' : ''}
                   `}
                 >
@@ -117,7 +117,7 @@ const CalendarView = () => {
                   className={`p-3 rounded-xl border transition-all ${
                     isOverdue(task.deadline) && task.status !== 'done'
                       ? 'border-red-500/30 bg-red-500/5'
-                      : 'border-white/8 glass'
+                      : 'border-white/10 glass'
                   }`}
                 >
                   <p className="text-sm font-medium text-white mb-2 leading-snug">{task.title}</p>

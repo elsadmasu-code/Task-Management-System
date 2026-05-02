@@ -27,7 +27,7 @@ const KanbanCard = ({ task, onClick }) => {
       {...attributes}
       {...listeners}
       onClick={onClick}
-      className={`glass rounded-xl p-3.5 border border-white/8 transition-all duration-200 select-none
+      className={`glass rounded-xl p-3.5 border border-white/10 transition-all duration-200 select-none
         hover:border-primary-500/30 hover:shadow-card-hover group
         ${isDragging ? 'shadow-glow border-primary-500/50 rotate-1' : ''}
         ${overdue && task.status !== 'done' ? 'border-l-2 border-l-red-500' : ''}
@@ -42,7 +42,7 @@ const KanbanCard = ({ task, onClick }) => {
       <div className="flex items-center gap-1.5 mb-3 flex-wrap">
         <PriorityBadge priority={task.priority} />
         {task.tags?.slice(0, 2).map((tag) => (
-          <span key={tag} className="text-[10px] bg-white/8 text-gray-400 px-1.5 py-0.5 rounded-full">{tag}</span>
+          <span key={tag} className="text-[10px] bg-white/10 text-gray-400 px-1.5 py-0.5 rounded-full">{tag}</span>
         ))}
       </div>
 
